@@ -20,9 +20,8 @@ def init_gpt():
     global session
     orca_mini = "orca-mini-3b.ggmlv3.q4_0.bin"
     wizard_uncensored = "wizardLM-13B-Uncensored.ggmlv3.q4_0.bin"
-    wizard_uncensored_small = "wizardLM-7B-Uncensored.ggmlv3.q4_0.bin"
     ggml = "ggml-model-gpt4all-falcon-q4_0.bin"
-    model = gpt(ggml, model_path=".", allow_download=False)
+    model = gpt(wizard_uncensored, model_path=".", allow_download=True)
     inject_tts("GPT Initialized.")
 
 def get_session():
